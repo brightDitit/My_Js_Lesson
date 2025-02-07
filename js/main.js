@@ -38,8 +38,8 @@ console.log(myvariable, "Bright,Abel".split(","));
 
 //In javascript 0 = false while 1 = true which is boolean
 //console.log(Number(false));
-const mynumber =33;
-const myfloat = 33.0;
+//const mynumber =33;
+//const myfloat = 33.0;
 
 
 //MATH METHOD AND PROPERTIES
@@ -77,6 +77,7 @@ console.log(myString.charAt(Math.floor(Math.random()*3)));
 console.log(myString.charAt(Math.floor(Math.random()*4)));
 console.log(myString.charAt(Math.floor(Math.random()*5)));
 */
+//--------------------------------------------------------
 //IF STATEMENT
 /*
 if (score >=80){
@@ -106,7 +107,7 @@ if (score >=80){
     }
    }*/
 //SWITCH STATMENT
-
+//--------------------------------------------------------
 
 /*switch (Math.floor(Math.random() * 3 + 1)){
     //TOSTING A GAL WITH SWITCH STATEMENT 
@@ -130,7 +131,8 @@ if (score >=80){
 
 let playerOne = "rock";
 let computer = "";
-// IF STATEMENT WITH SWITCH STATEMENT
+
+// IF STATEMENT WITH SWITCH STATEMENT---------------------
 switch(playerOne){
     case computer:
         console.log("tie game");
@@ -156,7 +158,9 @@ switch(playerOne){
                     console.log("playerOne wins");
                 }
         }
-THIS IS CONDITIONALS: TERNARY OPRATOR 
+--------------------------------------------------------------                
+THIS IS CONDITIONALS: TERNARY OPRATOR
+-------------------------------------------------------------- 
 let abaa     = " Garry and Soup";
 let Creditor =  false;
 let Waiter = Creditor ? "sorry no food today come tomorrow " 
@@ -192,8 +196,9 @@ let outcome = computer === player
   :"Player wins";
 console.log(outcome);
 */
-//TYPES OF POP UPoh yes
-//Boolean type of pop up 
+//TYPES OF POP UP------------------------------------
+//Boolean type of pop up
+//----------------------------------------------------------
  //let myBoolean = confirm("ok === true\nCancel === false");
  //console.log(myBoolean);
 
@@ -211,6 +216,9 @@ console.log(outcome);
     console.log("you dond't have a name");
  }*/
 
+//Putting all together
+//------------------------------------------------------------
+    /*
 let PlayGame  = confirm("shall we play game?");
 if (PlayGame){
     let PlayChiorce = prompt("enter one of your chiorce. rocky, football or tenis");
@@ -252,4 +260,116 @@ if (PlayGame){
 
 }else{
     alert("maybe nxt time");
+} **/
+
+    //while loops
+
+/**    
+--------------------------------------------------------------
+while( Dnumber < 50){
+    Dnumber +=2;
+    console.log(Dnumber);
 }
+ 
+
+//do while loop
+--------------------------------------------------------------
+do {
+    console.log(Dnumber);
+
+}while(Dnumber<50);*/
+/**   FOR LOOP
+------------------------------------------------------------
+ 
+for(let i =0; i <= 10;){
+    console.log(i);
+    i++;
+}
+*/
+/**
+-------------------------------------------------------------
+//Playing with loop
+=============================================================
+let name = "Bright";
+for(let i = 0; i <= name.length; i++){
+    console.log(name.charAt(i));
+}
+// Do not create an infinit loop
+ */
+/**++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+Fuctions
+Methods are built in functions
+------------------------------------------------------------
+Fuctions declaration syntax
+-------------------------------
+
+function sum(num1, num2){
+
+    if(num1 === undefined){
+        return "num1 can't be empty";
+    }else if(num2 === undefined){
+        return "num2 can't be empty";
+    }else{
+        return num1 + num2;
+    }
+    
+  
+   
+}
+console.log(sum(2,6));
+
+//Working with functions
+==================================================
+function getUserNameFromEmail(email){
+    return email.slice(0, email.indexOf("@"));
+}
+console.log(getUserNameFromEmail("brihhtabel42@gmail.com"))
+
+//function to convert your name first letter to Upper case
+------------------------------------------------------------
+const bigletter = (name) =>{
+return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+}
+console.log(bigletter("bright"));
+------------------------------------------------------------
+//Arrays 
+
+-----------------------------
+
+
+const myAray = [];
+
+myAray[0] = "Bright";
+myAray[1] = 33;
+myAray[2] = true;
+//myAray.unshift(9159660231);//unshift to ad to nthe beggining
+//myAray.push("city");//push to add to the ending
+
+//myAray.splice(2, 2);//splice to delet without getting 
+// undefined data
+console.log(myAray);
+myAray.splice(1, 1, 91);
+
+
+//Aray with slice method----------------------------------
+const myArray = ["A", "B", "C", "D", "E", "F"];
+const MySecondArray = ["X","Y","z"];
+//const together = myArray.concat(MySecondArray);
+//const newArray = myArray.slice(2, 5);
+//Join method
+//const JoinArray = myArray.join();
+
+//using the spread oprator-----------------------------------
+//const together = [...myArray, ...MySecondArray];
+/---------------------------------------------------------
+//Joining the two arraay in new array 
+const together = [myArray,MySecondArray];
+//-----------------------------------------------------------
+console.log(together);
+
+*/
+//Object-----------------------------------------------------
+//Key-value pairs in curle brace-----------------------------
+const myobj = {name: "Bright"};
+console.log(myobj);
+
