@@ -1,0 +1,85 @@
+my cloudflare cname
+2a024780b92707e92eae2
+
+
+
+5@pUn!d7pjP4Zq password
+
+
+//Dom ------------------------------------------------------------
+const view1 = document.getElementById("view1");
+console.log(view1);
+const view2 = document.querySelector("#view2");
+console.log(view2);
+//view1.style.display="grid";
+const evendivs = view1.querySelectorAll("div:nth-of-type(2n)");
+console.log(evendivs);
+for (let i = 0; i < evendivs.length; i++){
+ evendivs[i].style.backgroundColor = "red";
+}
+const newtag = document.querySelector("nav h1");
+console.log(newtag);
+newtag.textContent = "I'm making progress"; 
+const navbar = document.querySelector("nav");
+navbar.innerHTML =`<h1>bTech</h1> <p>Intrisic Moltivation`;
+console.log(evendivs[0].parentElement);
+console.log(evendivs[0].parentElement.children);
+
+view1.style.display = "none";
+view2.style.display = "flex";
+view2.style.flexDirection = "row";
+view2.style.flexWrap = "wrap";
+view2.style.margin = "10px";
+// removing the hI element in view2 
+while(view2.lastChild){
+view2.lastChild.remove()
+}
+const createNewDiv = (parent, iter) =>{
+    const newDiv = document.createElement("div");
+    newDiv.textContent = iter;
+    newDiv.style.backgroundColor ="black";
+    newDiv.style.width           ="100px";
+    newDiv.style.height          ="100px";
+    newDiv.style.margin          ="10px";
+    newDiv.style.display         ="flex";
+    newDiv.style.justifyContent  ="center";
+    newDiv.style.alignItems      ="center";
+    parent.append(newDiv);
+
+}
+for(let i = 1; i <= 12; i++){
+    createNewDiv(view2, i);
+}
+
+
+toggle with ternary statement
+
+document.addEventListener("readystatechange", (event) =>{
+    if(event.target.readyState ==="complete"){
+        console.log("you are welcome");
+        initApp();
+    }
+});
+
+const initApp = () =>{
+    const view2 = document.querySelector("#view2");
+    const  div  = document.querySelector("div");
+    const  h2   = document.querySelector("h2");
+
+    view2.addEventListener("click", (event) => {
+        
+        view2.style.backgroundColor = "skyblue";
+        //view2.classList.remove("darkblue");
+    }, false);
+
+    div.addEventListener("click", (event) => {
+         div.style.backgroundColor = "red";
+    }, false);
+
+    h2.addEventListener("click", (event) => {
+       
+       const myText = event.target.textContent;
+       myText === "my second view" ? (event.target.textContent = "clicked")    : (event.target.textContent = "my second view");
+
+    }, false);
+};

@@ -367,9 +367,197 @@ const together = [myArray,MySecondArray];
 //-----------------------------------------------------------
 console.log(together);
 
-*/
+
 //Object-----------------------------------------------------
 //Key-value pairs in curle brace-----------------------------
 const myobj = {name: "Bright"};
-console.log(myobj);
 
+const anotherObj = {
+    alive: true,
+    answer: "yes",
+    hobbies: ["cooding", "jooging", "sleep"],
+    chope:{
+        garri: "one cup", 
+        soup: "fresh fish"
+    },
+    action: function(){
+        return `Time for ${this.chope.soup} soup`;   
+    }
+};
+console.log(anotherObj.action());
+
+Object Inheritance------------------------------------------
+
+const Vehicle ={
+    sidemirrow: 2,
+    engine: function(){
+        return "2000 hsp";
+    }
+};
+
+const truck = Object.create(Vehicle);
+truck.boat = 1;
+truck.wheel = 4;
+truck.seat = 4;
+truck.Native = function () {
+    return "EV Technology";
+};
+console.log(truck);
+console.log(truck.engine());
+console.log(truck.sidemirrow);
+console.log(truck.Native());
+
+// Band Object
+const band ={
+    vocal: "Bright Abel",
+    Guiter: "Jimmy Page",
+    Bass: "Bigg Voice",
+    Drums: "dummer Boy"
+};*/
+/** 
+console.log(band);
+console.log(Object.keys(band));
+console.log(Object.values(band));
+
+for (let job in band){
+    console.log(`on ?${job} it's ${band[job]}`);
+
+//Destructuring objects--------------------------------------
+const {Guiter: myvariable, Bass:mybass} = band;
+console.log(mybass);
+console.log(myvariable);     
+}*/
+// Javascript Classes
+//constructor class -----------------------------------------
+//Factory Function
+/**
+function pizzaFactory(pizzaSize){
+  const crust = "original";
+  const size  = pizzaSize;
+  return {
+    bake: () => console.log(`Baking a ${size} ${crust} crust pizza`)
+  };
+}
+const myPizza = pizzaFactory("small");
+myPizza.bake();
+**/
+ /*
+class Pizza{
+    crust   ="original";
+    #sausce ="traditional";
+    #size;
+    constructor(pizzaSize){
+        this.#size = pizzaSize;
+    }
+    getCrust (){
+        return this.crust;
+    }
+    setCrust(pizzaCrust){
+        this.crust = pizzaCrust;
+    }
+    herewego(){
+       console.log(`Here's ${this.crust} ${this.#sausce} sauce ${this.#size} pizza`)
+    };
+}
+const myPizza = new Pizza("large");
+myPizza.herewego();
+//child class--------------------------------------------
+
+class SpecialtyPizza extends Pizza{
+    constructor (pizzaSize){
+        super(pizzaSize);
+        this.type = "The work";
+    }
+    slice(){
+        console.log(`our ${this.type} ${this.size} pizza has 8 slices`);
+    }
+}
+const mySpecialty = new SpecialtyPizza("medium");
+mySpecialty.slice();
+ 
+//----------------------------------------------------------------------------------------------------------------------------------------------
+//Jason it is used to send and recieve data it's a text format that is completely language independent. Meanin Jason is used to send and recieved data in many laguage... no only javascript
+
+//Javascript Errors and error Handling
+"ues strict";
+const makeError = () => {
+    try{
+        throw new Error("this is error!");
+    }catch(err){
+        console.error(err.name);
+        console.error(err.message);
+        console.error(err.stack);
+
+    }finally{
+
+    }
+}
+makeError();
+
+
+
+
+//Dom ----------------------------------------------------------------------
+const view1 = document.getElementById("view1");
+console.log(view1);
+const view2 = document.querySelector("#view2");
+console.log(view2);
+//view1.style.display="grid";
+const evendivs = view1.querySelectorAll("div:nth-of-type(2n)");
+console.log(evendivs);
+for (let i = 0; i < evendivs.length; i++){
+ evendivs[i].style.backgroundColor = "red";
+}
+const newtag = document.querySelector("nav h1");
+console.log(newtag);
+newtag.textContent = "I'm making progress"; 
+const navbar = document.querySelector("nav");
+navbar.innerHTML =`<h1>bTech</h1> <p>Intrisic Moltivation`;
+console.log(evendivs[0].parentElement);
+console.log(evendivs[0].parentElement.children);
+
+view1.style.display = "none";
+view2.style.display = "flex";
+view2.style.flexDirection = "row";
+view2.style.flexWrap = "wrap";
+view2.style.margin = "10px";
+// removing the hI element in view2 
+while(view2.lastChild){
+view2.lastChild.remove()
+}
+const createNewDiv = (parent, iter) =>{
+    const newDiv = document.createElement("div");
+    newDiv.textContent = iter;
+    newDiv.style.backgroundColor ="black";
+    newDiv.style.width           ="100px";
+    newDiv.style.height          ="100px";
+    newDiv.style.margin          ="10px";
+    newDiv.style.display         ="flex";
+    newDiv.style.justifyContent  ="center";
+    newDiv.style.alignItems      ="center";
+    parent.append(newDiv);
+
+}
+for(let i = 1; i <= 12; i++){
+    createNewDiv(view2, i);
+}
+*/
+// JavaScript Event Listiner
+
+document.addEventListener("readystatechange", (event) =>{
+    if(event.target.readyState ==="complete"){
+        console.log("you are welcome");
+        initApp();
+    }
+});
+
+const initApp = () =>{
+    //submitting form with preventing default reloading page
+ const view3  = document.querySelector("#view3");
+ const myForm = document.querySelector("#myForm");
+ myForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log("submitted");
+ });
+  
+};
